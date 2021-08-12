@@ -1,0 +1,31 @@
+﻿@page "/steps"
+@layout MainLayout 
+
+<StepsContent SelectedPanel="@_selectedStep">
+	<StepPanel Name="accountStep">
+		This is the account step
+	</StepPanel>
+	<StepPanel Name="profileStep">
+		This is the admin step
+	</StepPanel>
+	<StepPanel Name="locationsStep">
+		This is the Main Location step
+	</StepPanel>
+	<StepPanel Name="reviewStep">
+		This is the review step
+	</StepPanel>
+</StepsContent>
+
+<Steps @bind-SelectedStep="_selectedStep">
+	<Step Name="accountStep">Account</Step>
+	<Step Name="profileStep">Administrator</Step>
+	<Step Name="locationsStep">Main Location</Step>
+	<Step Name="reviewStep">
+		<Marker>
+			<Blazorise.Icons.FontAwesome.Icon Name="FontAwesomeIcons.Flag" />
+		</Marker>
+		<Caption>
+			Finish
+		</Caption>
+	</Step>
+</Steps>

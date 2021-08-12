@@ -1,0 +1,54 @@
+﻿@inherits LayoutComponentBase
+
+<Layout>
+	<LayoutHeader>
+		<nav class="navbar top-bar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/">
+					UI Base Project
+				</a>
+
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+
+			<div id="navMenu" class="navbar-menu">
+				<div class="navbar-end">
+					<div class="navbar-item login-info">
+					</div>
+				</div>
+			</div>
+		</nav>
+	</LayoutHeader>
+	<Layout Sider="true">
+		<LayoutSider Class="toolbar-sider">
+			<LayoutSiderContent>
+				<Bar
+					 Mode="BarMode.VerticalSmall"
+					 CollapseMode="BarCollapseMode.Small"
+					 Breakpoint="Breakpoint.Mobile"
+					 NavigationBreakpoint="Breakpoint.Tablet"
+					 Visible="false"
+					 Margin="Margin.Is3.FromTop">
+					<BarMenu>
+						<BarStart>
+							<BarItem>
+								<BarLink Title="Home" To="/">
+									H
+								</BarLink>
+							</BarItem>
+						</BarStart>
+					</BarMenu>
+				</Bar>
+			</LayoutSiderContent>
+		</LayoutSider>
+		<Layout>
+			<LayoutContent Class="app-content">
+				@Body
+			</LayoutContent>
+		</Layout>
+	</Layout>
+</Layout>
